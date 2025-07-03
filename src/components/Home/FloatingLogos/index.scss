@@ -1,0 +1,29 @@
+.floating-logos {
+  position: relative;
+  
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+
+  .logo {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 0; //sağa yasla
+    opacity: 0.6;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease;
+  }
+}
+
+@keyframes slow-float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
