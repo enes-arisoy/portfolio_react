@@ -1,6 +1,6 @@
 # 🚀 Modern React Portfolio - Enes Arisoy
 
-## A high-performance, responsive portfolio showcasing professional web development skills.
+A high-performance, responsive portfolio showcasing professional web development skills.
 
 ## ✨ Features
 
