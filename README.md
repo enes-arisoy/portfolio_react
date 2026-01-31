@@ -1,15 +1,6 @@
 # 🚀 Modern React Portfolio - Enes Arisoy
 
-<p align="center">
-  <strong>A high-performance, responsive portfolio showcasing professional web development skills.</strong>
-</p>
-
-<p align="center">
-  <a href="https://enes-arisoy.github.io/portfolio_react/">
-    <img src="https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=google-chrome&logoColor=white" />
-  </a>
-</p>
----
+## A high-performance, responsive portfolio showcasing professional web development skills.
 
 ## ✨ Features
 
@@ -34,8 +25,10 @@
 
 ---
 
-<p align="center">
-  Designed and Developed with ❤️ by <strong>Enes Arisoy</strong>
-</p>
+Designed and Developed with ❤️ by <strong>Enes Arisoy</strong>
 
-()[]
+## Repository
+
+[Repository](https://github.com/enes-arisoy/portfolio_react.git)
+
+## Demo
