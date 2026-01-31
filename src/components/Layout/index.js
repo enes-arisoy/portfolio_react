@@ -1,5 +1,7 @@
 import './index.scss'
 import Sidebar from './../sidebar/index'
+import Footer from '../Footer'
+
 import { Outlet } from 'react-router-dom'
 
 const Layout = () => {
@@ -7,13 +9,9 @@ const Layout = () => {
     <div className="App">
       <Sidebar />
       <div className="page">
-        <span className="tags top-tags">&lt;body&gt;</span>
-
         <Outlet />
-        <span className="tags bottom-tags">
-          &lt;body&gt; <br />
-        </span>
       </div>
+      <Footer />
     </div>
   )
 }

@@ -1,21 +1,19 @@
 .page {
   width: 100%;
   height: 100%;
-  position: absolute;
 }
 
 .top-tags {
-  bottom: auto;
-  top: 35px;
+  top: 15px;
 }
 
 .tags {
-  color: #ffd700;
+  color: #00d4ff;
   opacity: 0.6;
   position: absolute;
-  bottom: 0;
-  left: 120px;
-  font-size: 18px;
+  bottom: 10px;
+  left: 80px;
+  font-size: 23px;
   font-family: "La Belle Aurore";
 }
 
@@ -26,7 +24,6 @@
   min-height: 566px;
   position: absolute;
   opacity: 0;
-  top: 5%;
   margin: 0 auto;
   z-index: 1;
   transform-style: preserve-3d;
@@ -39,45 +36,16 @@
 .container.portfolio-page h1 {
   font-size: 53px;
   font-family: "Coolvetica";
-  color: #ffd700;
+  color: #edf2f4;
   font-weight: 400;
-  margin-top: 0;
   position: relative;
   margin-bottom: 40px;
-  left: -10px;
-}
-.container.contact-page h1:before,
-.container.about-page h1:before,
-.container.portfolio-page h1:before {
-  content: "<h1>";
-  font-family: "La Belle Aurore", cursive;
-  color: #ffd700;
-  font-size: 18px;
-  position: absolute;
-  margin-top: -10px;
-  left: -10px;
-  opacity: 0.6;
-  line-height: 18px;
-}
-.container.contact-page h1:after,
-.container.about-page h1:after,
-.container.portfolio-page h1:after {
-  content: "<h1/>";
-  font-family: "La Belle Aurore", cursive;
-  color: #ffd700;
-  font-size: 18px;
-  line-height: 18px;
-  position: absolute;
-  left: -30px;
-  bottom: -20px;
-  margin-left: 20px;
-  opacity: 0.6;
 }
 .container.contact-page p,
 .container.about-page p,
 .container.portfolio-page p {
   font-size: 13px;
-  color: #fff;
+  color: #cccccc;
   font-family: sans-serif;
   font-weight: 300;
   max-width: -moz-fit-content;
@@ -106,7 +74,7 @@
   left: 10%;
   top: 50%;
   transform: translateY(-50%);
-  width: 35%;
+  width: 45%;
   vertical-align: middle;
   display: table-cell;
   max-height: 90%;
@@ -114,5 +82,22 @@
 .container.contact-page .text-animate-hover:hover,
 .container.about-page .text-animate-hover:hover,
 .container.portfolio-page .text-animate-hover:hover {
-  color: #fff;
+  color: #00d4ff;
+}
+
+@media screen and (max-width: 1200px) {
+  .container .text-zone {
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+  .container h1 {
+    font-size: 42px;
+  }
+  .container p {
+    margin: 0 auto 20px auto;
+  }
 }/*# sourceMappingURL=index.css.map */

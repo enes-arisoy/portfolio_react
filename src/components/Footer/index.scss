@@ -1,0 +1,16 @@
+.footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: #cccccc; // Matching the paragraph color from Layout.scss
+  font-family: 'poppins', cursive; // Using the font that seems used for tags, or maybe Coolvetica depending on preference, sticking to a readable one or one used in tags
+  font-size: 14px;
+  z-index: 999;
+  letter-spacing: 1px;
+
+  @media screen and (max-width: 1200px) {
+    font-size: 12px;
+    bottom: 5px;
+  }
+}

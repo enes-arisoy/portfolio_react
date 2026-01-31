@@ -1,24 +1,24 @@
 import { useEffect, useState } from 'react'
-import {
-  faGithub,
-  faCss3,
-  faGitAlt,
-  faHtml5,
-  faJsSquare,
-  faReact,
-  
-} from '@fortawesome/free-brands-svg-icons'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { motion } from 'framer-motion'
+import { faUsers, faCode } from '@fortawesome/free-solid-svg-icons'
 import './index.scss'
-
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
+  const [visitorCount, setVisitorCount] = useState(500)
 
   useEffect(() => {
-     const timeoutId = setTimeout(() => {
+    // Visitor counter logic
+    const storedVisits = localStorage.getItem('about_visits')
+    const currentVisits = storedVisits ? parseInt(storedVisits, 10) : 0
+    const newVisits = currentVisits + 1
+    localStorage.setItem('about_visits', newVisits.toString())
+    setVisitorCount(500 + newVisits)
+
+    const timeoutId = setTimeout(() => {
       setLetterClass('text-animate-hover')
     }, 3000)
 
@@ -37,45 +37,62 @@ const About = () => {
             />
           </h1>
           <p>
-            I'm a very ambitious front-end developer looking for a role in an
-            established IT company with the opportunity to work with the latest
-            technologies on challenging and diverse projects.
+            Fullstack Developer with a strong focus on building modern, scalable
+            web and mobile applications. I specialize in React, Next.js,
+            TypeScript, and Redux, with hands-on experience creating responsive,
+            high-performance user interfaces.
           </p>
-          <p align="LEFT">
-            I'm quiet confident, naturally curious, and perpetually working on
-            improving my chops one design problem at a time.
+
+          <p>
+            I actively work with Tailwind CSS, Sass, Firebase, and Git to
+            deliver clean, maintainable, and production-ready code. I care
+            deeply about clean architecture, scalability, and performance
+            optimization, and I have practical experience with testing using
+            Jest and efficient data management using TanStack Query.
           </p>
           <p>
-            If I need to define myself in one sentence that would be a family
-            person, father of a beautiful daughter, a sports fanatic,
-            photography enthusiast, and tech-obsessed!!!
+            In addition to web development, I have expanded my skill set into
+            React Native for cross-platform mobile applications and the MERN
+            stack (MongoDB, Express.js, React, Node.js) for full-stack
+            solutions, enabling end-to-end feature development and API
+            integration. I am a solution-oriented and collaborative developer,
+            experienced in working with cross-functional teams and aligning
+            technical solutions with business needs. I am open to working in
+            international environments and relocation opportunities.
           </p>
         </div>
 
-        <div className="stage-cube-cont">
-          <div className="cubespinner">
-            <div className="face1">
-              <FontAwesomeIcon icon={faGithub} color="#DD0031" />
-            </div>
-            <div className="face2">
-              <FontAwesomeIcon icon={faHtml5} color="#F06529" />
-            </div>
-            <div className="face3">
-              <FontAwesomeIcon icon={faCss3} color="#28A4D9" />
-            </div>
-            <div className="face4">
-              <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
-            </div>
-            <div className="face5">
-              <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
-            </div>
-            <div className="face6">
-              <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
-            </div>
+        <div className="stats-right-container">
+          <div className="stats-cards">
+            <motion.div
+              className="stat-card"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+            >
+              <FontAwesomeIcon icon={faUsers} className="stat-icon" />
+              <div className="stat-info">
+                <span className="stat-value">{visitorCount}+</span>
+                <span className="stat-label">Visitors</span>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="stat-card"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.8, duration: 0.8 }}
+            >
+              <FontAwesomeIcon icon={faCode} className="stat-icon" />
+              <div className="stat-info">
+                <span className="stat-value">50+</span>
+                <span className="stat-label">Projects</span>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>
-      <Loader type="pacman" />
+      <Loader type="ball-triangle-path" />
     </>
   )
 }

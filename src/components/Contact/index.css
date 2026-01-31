@@ -1,0 +1,129 @@
+.contact-page {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  height: 100vh;
+  box-sizing: border-box;
+}
+.contact-page .left-side {
+  flex: 1;
+  padding: 2rem 1rem 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 100px;
+}
+.contact-page .left-side .text-zone {
+  position: static;
+  transform: none;
+  width: 100%;
+  display: block;
+}
+.contact-page .right-side {
+  flex: 0.8;
+  height: 80%;
+  max-height: 500px;
+  min-height: 300px;
+  overflow: hidden;
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
+  margin: auto 50px auto 0;
+}
+.contact-page .map-wrap {
+  width: 100%;
+  height: 100%;
+}
+.contact-page .map-wrap .leaflet-container {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: backInRight 1s 1.2s forwards;
+}
+.contact-page .contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-page .contact-form form ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.contact-page .contact-form form ul li {
+  flex: 1 1 100%;
+  opacity: 0;
+  animation: fadeInUp 2s 2s forwards;
+}
+.contact-page .contact-form form ul li.half {
+  flex: 1 1 calc(50% - 5px);
+}
+.contact-page .contact-form form input[type=text],
+.contact-page .contact-form form input[type=email],
+.contact-page .contact-form form textarea {
+  width: 100%;
+  border: none;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 16px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 1px solid #333;
+}
+.contact-page .contact-form form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+.contact-page .contact-form form .flat-button {
+  align-self: flex-end;
+  color: #00d4ff;
+  font-size: 11px;
+  letter-spacing: 2px;
+  padding: 10px 16px;
+  border: 1px solid #00d4ff;
+  border-radius: 4px;
+  background: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contact-page .contact-form form .flat-button:hover {
+  background: rgba(0, 212, 255, 0.1);
+  color: #00d4ff;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
+}
+@media screen and (max-width: 1200px) {
+  .contact-page {
+    flex-direction: column;
+  }
+  .contact-page .left-side,
+  .contact-page .right-side {
+    flex: 1 1 100%;
+    padding: 1rem;
+  }
+  .contact-page .right-side {
+    display: none;
+  }
+  .contact-page .left-side {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .contact-page .left-side .text-zone {
+    text-align: center;
+  }
+  .contact-page .left-side p {
+    margin: 0 auto 20px auto;
+  }
+  .contact-page .contact-form form ul {
+    flex-direction: column;
+  }
+  .contact-page .contact-form form ul li.half {
+    flex: 1 1 100%;
+  }
+  .contact-page .flat-button {
+    width: 100%;
+    align-self: stretch;
+    text-align: center;
+  }
+}/*# sourceMappingURL=index.css.map */

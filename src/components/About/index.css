@@ -1,78 +1,120 @@
-.stage-cube-cont {
-  width: 50%;
-  height: 100%;
-  top: 0;
-  padding-top: 18%;
-  margin-left: 0;
-  position: absolute;
-  right: 0;
-  overflow: hidden;
+.about-page .text-zone {
+  width: 45%;
+  left: 100px;
 }
-
-.cubespinner {
-  animation-name: spincube;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-duration: 12s;
-  transform-style: preserve-3d;
-  transform-origin: 100px 100px 0;
-  margin-left: calc(50% - 100px);
-}
-.cubespinner div {
+.about-page .stats-right-container {
   position: absolute;
-  width: 200px;
-  height: 200px;
-  border: 1px solid #ccc;
-  background: rgba(255, 255, 255, 0.4);
-  text-align: center;
-  font-size: 100px;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 20px 0px lightyellow;
 }
-.cubespinner .face1 {
-  transform: translateZ(100px);
-  color: #dd0031;
+.about-page .stats-right-container .stats-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  max-width: 400px;
 }
-.cubespinner .face2 {
-  transform: rotateY(90deg) translateZ(100px);
-  color: #f06529;
+.about-page .stats-right-container .stats-cards .stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px 40px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: default;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
-.cubespinner .face3 {
-  transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
-  color: #28a4d9;
+.about-page .stats-right-container .stats-cards .stat-card:hover {
+  background: rgba(0, 212, 255, 0.1);
+  border-color: rgba(0, 212, 255, 0.6);
+  transform: scale(1.05) translateX(-10px);
+  box-shadow: 0 20px 40px rgba(0, 212, 255, 0.15);
 }
-.cubespinner .face4 {
-  transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
-  color: #5ed4f4;
+.about-page .stats-right-container .stats-cards .stat-card .stat-icon {
+  font-size: 40px;
+  color: #00d4ff;
+  filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
 }
-.cubespinner .face5 {
-  transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
-  color: #efd81d;
+.about-page .stats-right-container .stats-cards .stat-card .stat-info {
+  display: flex;
+  flex-direction: column;
 }
-.cubespinner .face6 {
-  transform: rotateX(-90deg) translateZ(100px);
-  color: #ec4d28;
+.about-page .stats-right-container .stats-cards .stat-card .stat-info .stat-value {
+  color: #fff;
+  font-size: 42px;
+  font-family: "Coolvetica";
+  font-weight: 400;
+  line-height: 1.1;
+}
+.about-page .stats-right-container .stats-cards .stat-card .stat-info .stat-label {
+  color: #ccc;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 5px;
 }
 
-@keyframes spincube {
-  from, to {
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+@media screen and (max-width: 1200px) {
+  .about-page .text-zone {
+    width: 100%;
+    position: relative;
+    left: 0;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 50px;
   }
-  16% {
-    transform: rotateY(-90deg) rotateZ(90deg);
+  .about-page .stats-right-container {
+    position: relative;
+    width: 100%;
+    right: 0;
+    top: 0;
+    transform: none;
+    padding-bottom: 50px;
   }
-  33% {
-    transform: rotateY(-90deg) rotateX(90deg);
+  .about-page .stats-right-container .stats-cards {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: none;
+    padding: 0 20px;
   }
-  50% {
-    transform: rotateY(-180deg) rotateZ(90deg);
+  .about-page .stats-right-container .stats-cards .stat-card {
+    flex: 1;
+    max-width: 250px;
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
   }
-  66% {
-    transform: rotateY(-270deg) rotateX(90deg);
+  .about-page .stats-right-container .stats-cards .stat-card:hover {
+    transform: translateY(-10px);
   }
-  83% {
-    transform: rotateX(90deg);
+}
+@media screen and (max-width: 768px) {
+  .about-page .stats-right-container .stats-cards {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-page .stats-right-container .stats-cards .stat-card {
+    width: 90%;
+    max-width: 300px;
+    flex-direction: row;
+    text-align: left;
+  }
+  .about-page .stats-right-container .stats-cards .stat-card .stat-icon {
+    font-size: 32px;
+  }
+  .about-page .stats-right-container .stats-cards .stat-card .stat-info .stat-value {
+    font-size: 32px;
   }
 }/*# sourceMappingURL=index.css.map */

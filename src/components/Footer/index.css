@@ -1,0 +1,17 @@
+.footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: #cccccc;
+  font-family: "poppins", cursive;
+  font-size: 14px;
+  z-index: 999;
+  letter-spacing: 1px;
+}
+@media screen and (max-width: 1200px) {
+  .footer {
+    font-size: 12px;
+    bottom: 5px;
+  }
+}/*# sourceMappingURL=index.css.map */
