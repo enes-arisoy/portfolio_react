@@ -15,7 +15,7 @@
 .skills-page .text-zone h1 {
   color: #edf2f4;
   font-size: 48px;
-  font-family: "Coolvetica";
+  font-family: "Poppins";
   font-weight: 400;
   margin-bottom: 20px;
 }
@@ -29,7 +29,7 @@
 }
 .skills-page .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
   padding-bottom: 50px;
 }
@@ -38,7 +38,7 @@
   border-radius: 15px;
   padding: 25px;
   border: 1px solid rgba(0, 212, 255, 0.1);
-  transition: all 0.3s ease;
+  transition: all 0.3s ease !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 .skills-page .skill-category:hover {
@@ -77,7 +77,7 @@
   padding: 10px 15px;
   background: #c1c2c5;
   border-radius: 8px;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease !important;
   cursor: default;
 }
 .skills-page .skill-item:hover {
@@ -101,7 +101,7 @@
   font-weight: 600;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   .skills-page {
     padding: 30px 20px;
   }
@@ -120,5 +120,6 @@
   }
   .skills-page .skills-grid {
     grid-template-columns: 1fr;
+    justify-content: center;
   }
 }/*# sourceMappingURL=index.css.map */

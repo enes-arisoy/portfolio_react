@@ -10,8 +10,8 @@ const Layout = () => {
       <Sidebar />
       <div className="page">
         <Outlet />
+        <Footer />
       </div>
-      <Footer />
     </div>
   )
 }
